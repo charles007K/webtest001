@@ -12,37 +12,79 @@
             background-color: #f4f4f4;
         }
         .container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: auto;
-            gap: 20px;
-            padding: 20px;
             max-width: 1200px;
             margin: auto;
+            padding: 20px;
             background-color: #fff;
         }
         .header {
-            grid-column: 1 / -1;
             text-align: center;
             background-color: #2c3e50;
             color: white;
             padding: 20px 0;
         }
-        .section {
+        .header h1 {
+            margin: 0;
+        }
+        .header p {
+            margin: 5px 0 0;
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            margin-top: -20px;
+        }
+        .profile img {
+            border-radius: 50%;
+            margin-right: 20px;
+            width: 100px;
+            height: 100px;
+        }
+        .profile p {
+            margin: 0;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .column {
+            flex: 0 0 32%;
             background-color: #ecf0f1;
+            margin-bottom: 20px;
             padding: 15px;
             border-radius: 5px;
         }
-        .section h2 {
+        .column h2 {
             margin-top: 0;
             color: #2c3e50;
         }
         .footer {
-            grid-column: 1 / -1;
             text-align: center;
             padding: 10px 0;
             background-color: #2c3e50;
             color: white;
+            margin-top: 20px;
+        }
+        @media screen and (max-width: 768px) {
+            .column {
+                flex: 0 0 48%;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .column {
+                flex: 0 0 100%;
+            }
+            .profile {
+                flex-direction: column;
+                text-align: center;
+            }
+            .profile img {
+                margin-bottom: 10px;
+            }
         }
     </style>
 </head>
@@ -52,84 +94,88 @@
             <h1>Jane Smith</h1>
             <p>Junior Architect</p>
         </div>
-
-        <div class="section">
-            <h2>Work Experience</h2>
-            <p>Intern Architect at Chaudfontaine Architects (01/2021 - 12/2021)</p>
-            <ul>
-                <li>Developed and executed marketing strategies.</li>
-                <li>Participated in design and construction processes.</li>
-                <li>Produced drawings and layouts.</li>
-                <li>Created 3D models and video animations.</li>
-            </ul>
+        <div class="profile">
+            <img src="https://via.placeholder.com/100" alt="Jane Smith">
+            <div>
+                <p><strong>Email:</strong> jane@novoresume.com</p>
+                <p><strong>Phone:</strong> 123 444 5555</p>
+                <p><strong>Location:</strong> Copenhagen, Denmark</p>
+                <p><strong>LinkedIn:</strong> linkedin.com/in/jane.smith</p>
+                <p><strong>Instagram:</strong> instagram.com/jane.smith</p>
+            </div>
         </div>
-
-        <div class="section">
-            <h2>Education</h2>
-            <p>MSc Space Syntax: Architecture and Cities at UCL (08/2019 - 06/2021)</p>
-            <ul>
-                <li>Spatial Dynamics and Computation</li>
-                <li>Architectural Phenomena</li>
-                <li>Buildings, Organizations and Networks</li>
-                <li>Design as a Knowledge-Based Process</li>
-            </ul>
+        <div class="content">
+            <div class="column">
+                <h2>Work Experience</h2>
+                <p>Intern Architect at Chaudfontaine Architects (01/2021 - 12/2021)</p>
+                <ul>
+                    <li>Developed and executed marketing strategies.</li>
+                    <li>Participated in design and construction processes.</li>
+                    <li>Produced drawings and layouts.</li>
+                    <li>Created 3D models and video animations.</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h2>Education</h2>
+                <p>MSc Space Syntax: Architecture and Cities at UCL (08/2019 - 06/2021)</p>
+                <ul>
+                    <li>Spatial Dynamics and Computation</li>
+                    <li>Architectural Phenomena</li>
+                    <li>Buildings, Organizations and Networks</li>
+                    <li>Design as a Knowledge-Based Process</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h2>Personal Projects</h2>
+                <p>NOTBLOX Affordable Housing Project (06/2020)</p>
+                <ul>
+                    <li>Designed sophisticated and easy-to-construct housing.</li>
+                </ul>
+                <p>The S House: A Passive House (02/2020)</p>
+                <ul>
+                    <li>Integrated form, structure, and mechanical features.</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Presentation & Public Speaking</li>
+                    <li>Active Listening</li>
+                    <li>Perseverance</li>
+                    <li>Teamwork</li>
+                    <li>Written & Oral Communication</li>
+                    <li>Creativity & Problem Solving</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h2>Technical Skills</h2>
+                <ul>
+                    <li>Graphics: Hand Drafting, Sketching, AutoCAD, ArgGIS, Adobe Creative Suite</li>
+                    <li>BIM & 3D Modeling: SketchUp Pro, SU Podium, Revit</li>
+                    <li>Platforms: Windows & OSX, Microsoft Office, Google Drive/Docs</li>
+                    <li>Other: Web Development, Model Building, Darkroom Techniques, Photography</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h2>Languages</h2>
+                <ul>
+                    <li>English</li>
+                    <li>Danish</li>
+                    <li>German</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h2>Interests</h2>
+                <ul>
+                    <li>Artificial Intelligence</li>
+                    <li>Virtual Reality</li>
+                    <li>Chess</li>
+                    <li>Travelling</li>
+                    <li>Painting</li>
+                    <li>Trail Running</li>
+                </ul>
+            </div>
         </div>
-
-        <div class="section">
-            <h2>Personal Projects</h2>
-            <p>NOTBLOX Affordable Housing Project (06/2020)</p>
-            <ul>
-                <li>Designed sophisticated and easy-to-construct housing.</li>
-            </ul>
-            <p>The S House: A Passive House (02/2020)</p>
-            <ul>
-                <li>Integrated form, structure, and mechanical features.</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Skills</h2>
-            <ul>
-                <li>Presentation & Public Speaking</li>
-                <li>Active Listening</li>
-                <li>Perseverance</li>
-                <li>Teamwork</li>
-                <li>Written & Oral Communication</li>
-                <li>Creativity & Problem Solving</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Technical Skills</h2>
-            <ul>
-                <li>Graphics: Hand Drafting, Sketching, AutoCAD, ArgGIS, Adobe Creative Suite</li>
-                <li>BIM & 3D Modeling: SketchUp Pro, SU Podium, Revit</li>
-                <li>Platforms: Windows & OSX, Microsoft Office, Google Drive/Docs</li>
-                <li>Other: Web Development, Model Building, Darkroom Techniques, Photography</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Languages</h2>
-            <ul>
-                <li>English</li>
-                <li>Danish</li>
-                <li>German</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Interests</h2>
-            <ul>
-                <li>Artificial Intelligence</li>
-                <li>Virtual Reality</li>
-                <li>Chess</li>
-                <li>Travelling</li>
-                <li>Painting</li>
-                <li>Trail Running</li>
-            </ul>
-        </div>
-
         <div class="footer">
             <p>Contact: jane@novoresume.com | 123 444 5555 | Copenhagen, Denmark</p>
         </div>
